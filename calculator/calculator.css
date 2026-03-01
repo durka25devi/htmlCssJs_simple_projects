@@ -1,0 +1,52 @@
+*{
+    font-weight: bold;
+}
+.main_box{
+    width:260px;
+    border: 2px solid black;
+    margin: auto;
+    margin-top:40px;
+    box-shadow: 0 0 10px 3px grey;
+    padding:10px;
+    border-radius:10px;
+    background-color: rgb(11, 7, 58);
+}
+
+.input_box{
+    width:100%;
+    height:60px;
+    border:1px solid black;
+    margin-bottom:10px;
+    border-radius: 5px;
+    }
+#ac, #delete ,#equal{
+    background-color:  tomato;
+}
+
+#equal:hover, #ac:hover , #delete:hover{
+    background-color: rgb(242, 155, 139);
+}
+.container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+   }
+
+.small_box {
+ height:45px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ background-color: rgb(231, 231, 231);
+ border-radius:10px;
+}
+
+#equal{
+    grid-column-start:3;
+    grid-column-end:5;
+}
+.small_box:hover{
+    background-color:rgb(202, 200, 200); 
+    cursor: pointer;
+    
+}

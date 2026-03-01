@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            padding:10px;
+            border: 2px black solid;
+            width: 400px;
+            margin-top: 15%;
+            background-color: antiquewhite;
+            margin:auto;
+        }
+
+        #dec, #inc {
+            border : 1px solid black;
+            padding:10px;
+            display: inline-block; 
+            cursor:pointer;
+            margin-bottom: 20px;
+            background-color: rgb(246, 246, 246);
+
+        }
+
+        #dec:hover ,#inc:hover{
+            background-color: rgb(212, 212, 212);
+        }
+
+        #count {
+         font-size: 2rem;
+         font-weight: bold;
+         margin-bottom: 15px;
+        }
+
+        h1,#incnum,#decnum{
+            display:inline-block;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+            <p id ="count"></p>
+            <div id="dec">Decrement</div>
+            <div id="inc">Increment</div>
+            <h1>Clicks on Increment: <span id="incnum">0</span></h1>
+            <h1>Clicks on Decrement: <span id="decnum">0</span></h1>
+    </div>
+
+<script>
+
+    let totalcount=0;
+    let inc_count=0;
+    let dec_count=0;
+
+    let decrement=document.getElementById('dec');
+    let show=document.getElementById('count');
+    let increment=document.getElementById('inc');
+    let incnum=document.getElementById('incnum');
+    let decnum=document.getElementById('decnum');
+
+    decrement.addEventListener("click",(e) => {
+    if(totalcount>0){
+    totalcount--;
+    show.innerText=totalcount;
+    inc_count=0; 
+    incnum.innerText = inc_count;  
+    dec_count++;
+    decnum.innerText=dec_count;
+                }
+
+    });
+
+    increment.addEventListener("click",(e) => {
+    if(totalcount<10){
+    totalcount++;
+    show.innerText=totalcount;
+    dec_count = 0;
+    decnum.innerText = dec_count;
+    if(inc_count<10){
+    inc_count++;
+    }
+
+    incnum.innerText=inc_count;
+    }
+    });
+</script>
+
+</body>
+</html>
