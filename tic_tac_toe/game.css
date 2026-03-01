@@ -1,0 +1,24 @@
+*{
+    background-color: black;
+}
+.main_box{
+    padding:10px;
+    border: 2px solid white;
+    width:300px;
+    height:300px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    gap:2px;
+}
+/*grid items */
+.items{
+    background-color: rgb(162, 161, 161);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:50px;
+    font-weight:bold;
+    cursor: pointer;
+}
