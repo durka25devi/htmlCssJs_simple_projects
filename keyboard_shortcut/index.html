@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard shortcuts</title>
+    <style>
+        .main{
+            width:500px;
+            border: 1px solid black;
+            margin: 50px auto;
+            box-shadow: black 10px 10px 10px;
+            
+        }
+        .para h2,p{
+            text-align: center;
+            font-size: larger;
+
+        }
+        #working{
+            text-align: center;
+            font-size: 35px;
+           
+            color: green;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="para">
+            <h2>Keyboard Shortcuts</h2>
+            <p>Enter keys to see their working</p>
+            <div id="working"></div>
+
+        </div>
+    </div>
+ <script>
+    document.addEventListener("keydown" ,function(event){
+        let msg="";
+
+        if(event.ctrlKey){
+        
+        switch(event.key.toLowerCase()){
+            case "a":
+                msg="Selected All"
+                break;
+            case "c": 
+                msg="copied";
+                break;
+            case "v": 
+                msg="pasted";
+                break;
+            case "x": 
+                msg="cut";
+                break;
+            case "z": 
+                msg="undo";
+                break;
+            default:
+                msg="no action for this key";
+
+        }
+    }
+    document.getElementById("working").innerText=msg;
+    event.preventDefault();
+
+    }
+);
+ </script>   
+</body>
+</html>
